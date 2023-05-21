@@ -1,0 +1,79 @@
+body{
+    margin: 0px;
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    height: 100vh;
+    place-items:center;
+}
+.card-container,
+.small-card{
+    aspect-ratio: 2/3;
+}
+
+.card-container,
+.big-card{
+    width: 30vmin;
+}
+
+.big-card{
+    width: 30vmin;
+    border-radius: 1vmin;
+    background-color: rgb(0, 0, 0, 0.5);
+    aspect-ratio: 2/3;
+    position: absolute; 
+    background-size: cover;
+    transition: transform 1s cubic-bezier(.05,.75,.43,.98);
+   
+}
+
+.big-card:nth-child(1){
+    z-index: 4;
+    transform: translate(5%) rotate(2deg);
+    background-image: url(https://images.unsplash.com/photo-1682687982167-d7fb3ed8541d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80);
+}
+.big-card:nth-child(2){
+    z-index: 3;
+    background-image: url(https://images.unsplash.com/photo-1682685797365-6f57bbebffed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80);
+    transform: translate(-5%) rotate(-2deg);
+}
+.big-card:nth-child(3){
+    z-index: 2;
+    background-image: url(https://images.unsplash.com/photo-1682687982141-0143020ed57a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80);
+    transform: translate(25%)rotate(10deg);
+}
+.big-card:nth-child(4){
+    z-index: 1;
+    background-image: url(https://images.unsplash.com/photo-1684527953931-e0fe92d884c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80);
+    transform: translate(-25%)rotate(-10deg);
+}
+
+
+.card-container:hover > .big-card:nth-child(1){
+    transform: translate(90%)  rotate(32deg);
+}
+.card-container:hover > .big-card:nth-child(2){
+    transform: translate(-90%) rotate(-32deg);
+}
+.card-container:hover > .big-card:nth-child(3){
+    transform:  translateX(150%) rotate(32deg);
+}
+.card-container:hover > .big-card:nth-child(4){
+    transform: translateX(-150%)rotate(-32deg);
+}
+
+.small-card{
+    width: 10vmin;
+    border-radius: 1vmin;
+    background-color: aliceblue;
+    background-size: cover;
+    aspect-ratio: 2/3;
+    position: absolute;
+    
+}
+.small-card:nth-child(1){
+    background-image:url(https://images.unsplash.com/photo-1683659635781-a35b85a24f2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=523&q=80);
+}
+
+.card-container:hover > .small-card:nth-child(1){
+    transform: translate(50%) rotate(2deg);
+}
