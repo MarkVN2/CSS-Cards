@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Flow+Circular&family=Source+Code+Pro:wght@300&display=swap');
-body{
+#card-body{
     margin: 0px;
     background-size: cover;
     background-image: url(../images/jon-anders-dalan--unsplash.jpg);
@@ -9,12 +9,25 @@ body{
     height: 100vh;
     place-items:center;
 }
+#credit-body{
+    margin: 0px;
+    background-size: cover;
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    height: 100vh;
+    place-items:center;
+}
 h1{
     font-family: 'Source Code Pro', monospace;
 }
-#underbar{
+.bar{
     font-family: 'Flow Circular', cursive;
     color:white;
+}
+#credit-link{
+    color:white;
+    position: absolute;
+    padding-top:15vmin;
 }
 .card-container,
 .small-card{
